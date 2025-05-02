@@ -14,7 +14,7 @@ import (
 
 type UserRepository interface {
 	// Find(ctx context.Context, filter any) ([]models.User, error)
-	GetAll() ([]models.User, error)
+	GetAll() ([]*models.User, error)
 }
 
 type MongoUserRepository struct {

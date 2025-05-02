@@ -10,16 +10,17 @@ func TestUserService (t *testing.T) {
 		userRepository: repository.StubUserRepository{},
 	}
 
-	stubUsers, err := userService.GetAll()
-	if err != nil {
-		t.Error("was not told to err: ", err.Error())
-	}
+	t.Run("should receive the right number of registered users", func(t *testing.T){
+		stubUsers, err := userService.GetAll()
+		if err != nil {
+			t.Error("was not told to err: ", err.Error())
+		}
 
-	want := 2
-	got := len(stubUsers)
+		want := 2
+		got := len(stubUsers)
 
-	if want != got {
-		t.Errorf("want %d users, got %d", want, got)
-	}
-
+		if want != got {
+			t.Errorf("want %d users, got %d", want, got)
+		}
+	})
 }
