@@ -51,3 +51,7 @@ Go 1.20+
 MongoDB
 
 MongoDB Go Driver (go.mongodb.org/mongo-driver/mongo)
+
+## TODOS
+- Create a SproutContext where all configurations will live in
+- Create Bean "annotation": automatically assigned to the context and multual single instance reference among Beans
